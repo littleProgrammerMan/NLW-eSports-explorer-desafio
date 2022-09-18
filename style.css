@@ -1,0 +1,273 @@
+* {
+    /* aqui zeramos os valores que já estão predefinidos no navegador, zerando o espaçamento interno */
+    padding: 0;
+    /* zerando a margem */
+    margin: 0;
+    /* definindo border box */
+    box-sizing: border-box;
+}
+
+body {
+    /* adicionando a imagem de fundo */
+    background-image: url(./assets/bg.jpg);
+    /* definindo que a imagem assuma largura total da viewport e automatico na altura */
+    background-size: 100% auto;
+    /* difinindo imagem de fundo sem repetição */
+    background-repeat: no-repeat;
+    /* definindo a posição da imagem de fundo no topo centralizada */
+    background-position: top center;
+    /* definindo cor de fundo  */
+    background-color: #121214;
+}
+
+body * {
+    /* definindo uma fonte padrão para todos os elementos do body */
+    font-family: 'Montserrat', sans-serif;
+    /* adicionando a altura da linha */
+    line-height: 160%;
+}
+
+header {
+    /* adicionando um espaçamento interno superior para descolar ela do topo */
+    padding-top: 32px;
+    /* text-align: center; */
+}
+
+header div {
+    /* definindo um largura pro elemento (div) */
+    width: 120px;
+    /* alinhando a div */
+    margin: auto;
+    /* aqui adicionamos uma cor de fundo baseada em um gradiente, por isso utilizamos a propriedade (background-image) e ativamos a função (linear-gradient) */
+    background-image: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+    /* deixando a borda aredondada */
+    border-radius: 50%;
+    /* aqui adicionamos o display flex para alinha nossa div ao elemento filho */
+    display: flex;
+    /* adicionando um padding interno para que a borda saia pra fora */
+    padding: 4px;
+    /* definindo o tempo de transição da animação */
+    transition: transform .3s;
+}
+
+header div:hover {
+    /* criando uma animação com o passar do mouse */
+    transform: scale(1.1);
+}
+
+header img {
+    /* definindo uma larfura pra imagem de 100% da largura do elemento Pai */
+    width: 100%;
+    /* arredondando as bordas da imagem */
+    border-radius: 50%;
+}
+
+main {
+    /* definindo uma largura máxima de expanção */
+    max-width: 520px;
+    /* definindo uma largura minima */
+    width: 90%;
+    /* aqui adicionamos uma margem em cima e baixo para descolar os elentos e na lateral para manter alinhado */
+    margin: 32px auto;
+    /* ativando o display grid aqui temos acesso a propriedade gap */
+    display: grid;
+    /* isso irá nos ajudar a separar as sections */
+    gap: 24px;
+    /* aqui adicionamos uma margem superior */
+    /* margin-top: 32px; */
+}
+
+main * {
+    /* isso nos ajuda a ter um noção de espaço e tamanho */
+    /* border: solid 1px red; */
+}
+
+section {
+    /* aqui adicionamos uma cor de fundo baseada em um gradiente, por isso utilizamos a propriedade (background-image) e ativamos a função (linear-gradient) */
+    background-image: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+    /* adicionando um espaçamento interno superio na section */
+    padding-top: 4px;
+    /* aqui adicionamos uma borda arredondada */
+    border-radius: 10px;
+}
+
+section div {
+    /* definindo a cor de fundo do card (dvi) */
+    background-color: #262629;
+    /* adicionando um espaçamento interno */
+    padding: 32px;
+    /* adicionando um espaçamento interno superior para sobrescrever apenas a parte superio do elemento */
+    padding-top: 24px;
+    /* adicionando uma borda arredondada */
+    border-radius: 8px;
+}
+
+section h2 {
+    /* citando a cor dos títulos */
+    color: white;
+    /* citando o peso da fonte em todos os h2 que estiverem dentro de uma section */
+    font-weight: 900;
+    /* citando o tamanho da fonte */
+    font-size: 24px;
+}
+
+section p {
+    /* adicionando uma cor ao elemento de texto do tipo paragrafo*/
+    color: #C1C1C1;
+    /* citando o peso da fonte em todos os p que estiverem dentro de uma section */
+    font-weight: 400;
+    /* citando o tamanho da fonte */
+    font-size: 16px;
+    /* citando o espaçamento entre as letras */
+    letter-spacing: -0.18px;
+}
+
+section ul {
+    /* aqui adicionamos uma propriedade chamada display flex que irá auxiliar no posicionamento dos elementos dentro da ul */
+    display: flex;
+    /* aqui adicionamos uma propiedade que irá quebrar o conteudo caso ele atinja a largura máxima */
+    flex-wrap: wrap;
+    /* removendo o estilo padrão da lista desordenada */
+    list-style: none;
+    /* aqui mencionamos o espaçamento entre cada elemento dentro da lista, isso só funciona com o display flex ou grid */
+    gap: 16px;
+    /* aqui adicionamos uma margem superior na lista para dar um espaço entre os elementos */
+    margin-top: 24px;
+}
+
+section ul li {
+    /* definindo um tempo de transição para a animação */
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    /* aqui definimos nossa animação caso passe o mouse sobre a lista */
+    transform: scale(1.1);
+}
+
+section ul li img {
+    /* aqui adicionamos a largura da imagem */
+    width: 100px;
+    /* aqui já adicionamos o arredondamento da imagem */
+    border-radius: 8px;
+    /* e aqui adicionamos um borda bem fininha para cada imagem da lista */
+    border: 1px solid #555555;
+}
+
+/* animation */
+
+header div {
+    animation: fromTop 1s .2s backwards;
+}
+
+main section {
+    animation: fromBottom 1s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: .5s;
+}
+
+main section:nth-child(2) {
+    animation-delay: 1s;
+}
+
+main section:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+main section ul li {
+    animation: fromRight .7s backwards;
+}
+
+/* --------------- filmes -------------- */
+
+.films-list li:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.films-list li:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.films-list li:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.films-list li:nth-child(4) {
+    animation-delay: 2.5s;
+}
+
+/* --------------- séries -------------- */
+
+.series-list li:nth-child(1) {
+    animation-delay: 1.5s;
+}
+
+.series-list li:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.series-list li:nth-child(3) {
+    animation-delay: 2.5s;
+}
+
+.series-list li:nth-child(4) {
+    animation-delay: 3s;
+}
+
+/* --------------- redes socias -------------- */
+
+.networks-list li:nth-child(1) {
+    animation-delay: 2s;
+}
+
+.networks-list li:nth-child(2) {
+    animation-delay: 2.5s;
+}
+
+.networks-list li:nth-child(3) {
+    animation-delay: 3s;
+}
+
+.networks-list li:nth-child(4) {
+    animation-delay: 3.5s;
+}
+
+/* criando a rotação das animações iniciais */
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
